@@ -1,2 +1,2 @@
-# northcrosstech
+# Northcrosstech
 Portfolio Website for Northcrosstech
