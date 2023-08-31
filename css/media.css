@@ -88,4 +88,7 @@
     .mt-30{
         font-size: 0.7rem;
     }
+    .particles{
+        height: 120%;
+    }
 }
