@@ -54,9 +54,11 @@
     }
     .para{
         width: 100%;
+        font-size: 1rem;
     }
     .about {
         padding-top: 0rem;
+        margin-top: 3rem;
     }
     .image-logo{
         padding-top: 10rem;
@@ -73,5 +75,17 @@
     .contact-details li {
         margin-top: 1.5rem;
         flex-wrap: wrap;
+    }
+    .home{
+        margin-top: 3rem;
+    }
+    .para-intro{
+        font-size: 1.25rem;
+    }
+    .login-box{
+        padding: 2rem;
+    }
+    .mt-30{
+        font-size: 0.7rem;
     }
 }
