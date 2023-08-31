@@ -36,3 +36,33 @@
         max-width: 1536px;
     }
 }
+
+@media (max-width: 1365px){
+    .contact{
+        flex-direction: column;
+    }
+    .space-filler{
+        height: 25px;
+    }
+    .h-screen{
+        height: 35vh !important;
+    }
+    .intro{
+        font-size: 3.2rem;
+    }
+    .para{
+        width: 100%;
+    }
+    .about {
+        padding-top: 0rem;
+    }
+    .image-logo{
+        padding-top: 10rem;
+    }
+    .contact-footer {
+        padding-top: 0px;
+    }
+    .wrapper{
+        margin-top: 0rem;
+    }
+}
