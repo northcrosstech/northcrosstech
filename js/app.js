@@ -24,3 +24,11 @@
         preset: "snow",
     });
 })();
+
+function submitData(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let msg = document.getElementById("message").value;
+    console.log (name,email,phone,msg);
+}
