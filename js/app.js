@@ -1,5 +1,4 @@
 (async () => {
-    // await loadLinksPreset(tsParticles); // this is required only if you are not using the bundle script
     await tsParticles.load("tsparticles", {
         background: {
             color: {
@@ -25,10 +24,25 @@
     });
 })();
 
+const validateEmail = (email) => {
+    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        .test(email);
+};
+
 function submitData(){
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let msg = document.getElementById("message").value;
-    console.log (name,email,phone,msg);
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const msg = document.getElementById("message").value;
+
+    if (name && msg && phone && validateEmail(email)) {
+        emailjs.send("service_iulovok", "template_z459sc7", {
+            name, email, phone, msg
+        }, "PH4yWCVdj-veTtpOy")
+            .then(function(response) {
+               console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+               console.log('FAILED...', error);
+            });
+    }
 }
